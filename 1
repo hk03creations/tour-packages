@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore The World - Tour Packages</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Explore The World with Us</h1>
+    <p>Discover amazing tour packages tailored just for you.</p>
+  </header>
+
+  <main>
+    <section class="categories">
+      <div class="category-card" onclick="location.href='domestic.html';">
+        <img src="images/domestic.jpg" alt="Domestic Tours">
+        <div class="category-info">
+          <h2>Domestic Tours</h2>
+          <p>Explore hidden gems within the country.</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="location.href='international.html';">
+        <img src="images/international.jpg" alt="International Tours">
+        <div class="category-info">
+          <h2>International Tours</h2>
+          <p>Experience the world beyond borders.</p>
+        </div>
+      </div>
+
+      <div class="category-card" onclick="location.href='adventure.html';">
+        <img src="images/adventure.jpg" alt="Adventure Tours">
+        <div class="category-info">
+          <h2>Adventure Tours</h2>
+          <p>Thrilling adventures await you!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Explore The World. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.category-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: filter 0.3s ease;
+}
+
+.category-card:hover img {
+  filter: brightness(50%);
+}
+
+.category-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.category-card:hover .category-info {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.category-info h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card {
+    width: 90%;
+  }
+}
